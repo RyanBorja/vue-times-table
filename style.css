@@ -1,0 +1,28 @@
+body {
+	text-align: center;
+}
+
+h1 {
+	font-family: sans-serif;
+}
+
+table {
+	margin: 25px auto;
+}
+
+td {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+th {
+	background-color: #ccc;
+	font-family: sans-serif;
+
+}
+
+input {
+	padding: 10px;
+	text-align: center;
+	width: 40px;
+}

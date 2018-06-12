@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>Vue Times Table</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+
+	<div  id="main">
+
+		<h1>Vue Times Table</h1>
+
+		<table cellspacing="0" cellpadding="10" border="1">
+			<tr>
+				<th>Rows</th>
+				<th>Columns</th>
+			</tr>
+			<tr>
+				<td><input type="number" v-model.number="numberOfRows" size="5" v-bind:min="minRows" v-bind:max="maxRows"></td>
+				<td><input type="number" v-model.number="numberOfCols" size="5" v-bind:min="minCols" v-bind:max="maxCols"></td>
+			</tr>
+		</table>
+
+		<table cellspacing="0" cellpadding="10" border="1">
+			<tr>
+				<th>X</th>
+				<th v-for="col in numberizedCols">
+					{{ col }}
+				</th>
+			</tr>
+			<tr v-for="row in numberizedRows">
+				<th>{{ row }}</th>
+				<td v-for="col in numberizedCols">
+					{{ row * col }}
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
